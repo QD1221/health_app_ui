@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ColorSystem{
   static const Color green = Color(0xff65B897);
@@ -8,4 +9,8 @@ class ColorSystem{
   static const Color grey = Color(0xfff2f2f2);
 
 
+}
+
+class HealthAppTextStyle{
+  TextStyle onboardingTitleStyle = GoogleFonts.kanit();
 }
