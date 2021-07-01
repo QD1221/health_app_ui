@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:health_app_ui/health_app_style.dart';
+import 'package:health_app_ui/ui/health_home_page.dart';
 
 class HealthSignupPage extends StatefulWidget {
   const HealthSignupPage({Key key}) : super(key: key);
@@ -23,7 +24,7 @@ class _HealthSignupPageState extends State<HealthSignupPage> {
                   bottom: 36,
                   left: 120,
                   right: 120,
-                  child: Center(
+                  child: Center(  
                     child: Container(
                       height: 16,
                       width: 200,
@@ -178,7 +179,9 @@ class _HealthSignupPageState extends State<HealthSignupPage> {
                   ),
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => HealthHomePage()));
+                  },
                   child: Container(
                       height: 64,
                       width: 364,
