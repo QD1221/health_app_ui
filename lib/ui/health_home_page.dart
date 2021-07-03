@@ -26,7 +26,6 @@ class _HealthHomePageState extends State<HealthHomePage> {
                 left: 0,
                 right: 0,
                 child: Container(
-                  color: Colors.grey[300],
                   child: ListView(
                     children: [
                       Padding(
@@ -82,35 +81,161 @@ class _HealthHomePageState extends State<HealthHomePage> {
                                 color: ColorSystem.yellow,
                                 borderRadius: BorderRadius.circular(26),
                                 border: Border.all(color: Colors.black)),
+                            padding: const EdgeInsets.symmetric(horizontal: 16),
+                            child: Row(
+                              children: [
+                                Container(
+                                  height: 64,
+                                  width: 64,
+                                  decoration: BoxDecoration(
+                                      color: ColorSystem.green,
+                                      border: Border.all(color: Colors.black),
+                                      borderRadius: BorderRadius.circular(17)),
+                                  padding: EdgeInsets.all(8),
+                                  child:
+                                  SvgPicture.asset('assets/img/push_up.svg'),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text('Day 12',
+                                          style: GoogleFonts.kanit(
+                                              fontSize: 18, color: Colors.grey)),
+                                      Text('100 Push Up',
+                                          style: GoogleFonts.kanit(fontSize: 24))
+                                    ],
+                                  ),
+                                ),
+                                Spacer(),
+                                Container(
+                                  height: 38,
+                                  width: 76,
+                                  decoration: BoxDecoration(
+                                      color: ColorSystem.grey,
+                                      border: Border.all(color: Colors.black),
+                                      borderRadius: BorderRadius.circular(17)),
+                                  child: Center(
+                                    child: Text('Done',
+                                        style: GoogleFonts.kanit()),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 16),
+                          Container(
+                            height: 84,
+                            width: 364,
+                            padding: const EdgeInsets.symmetric(horizontal: 16),
+                            decoration: BoxDecoration(
+                                color: ColorSystem.white,
+                                borderRadius: BorderRadius.circular(26),
+                                border: Border.all(color: Colors.black)),
+                            child: Row(
+                              children: [
+                                Container(
+                                  height: 64,
+                                  width: 64,
+                                  decoration: BoxDecoration(
+                                      color: ColorSystem.green,
+                                      border: Border.all(color: Colors.black),
+                                      borderRadius: BorderRadius.circular(17)),
+                                  padding: EdgeInsets.all(8),
+                                  child:
+                                  SvgPicture.asset('assets/img/sit_up.svg'),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text('Day 18',
+                                          style: GoogleFonts.kanit(
+                                              fontSize: 18, color: Colors.grey)),
+                                      Text('20 Crunches',
+                                          style: GoogleFonts.kanit(fontSize: 24))
+                                    ],
+                                  ),
+                                ),
+                                Spacer(),
+                                Container(
+                                  height: 38,
+                                  width: 76,
+                                  decoration: BoxDecoration(
+                                      color: ColorSystem.green,
+                                      border: Border.all(color: Colors.black),
+                                      borderRadius: BorderRadius.circular(17)),
+                                  child: Center(
+                                    child: Text('Start',
+                                        style: GoogleFonts.kanit(color: Colors.white)),
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                           SizedBox(height: 16),
                           Container(
                             height: 84,
                             width: 364,
                             decoration: BoxDecoration(
-                                color: ColorSystem.yellow,
+                                color: ColorSystem.white,
                                 borderRadius: BorderRadius.circular(26),
                                 border: Border.all(color: Colors.black)),
-                          ),
-                          SizedBox(height: 16),
-                          Container(
-                            height: 84,
-                            width: 364,
-                            decoration: BoxDecoration(
-                                color: ColorSystem.yellow,
-                                borderRadius: BorderRadius.circular(26),
-                                border: Border.all(color: Colors.black)),
+                            padding: EdgeInsets.symmetric(horizontal: 16),
+                            child: Row(
+                              children: [
+                                Container(
+                                  height: 64,
+                                  width: 64,
+                                  decoration: BoxDecoration(
+                                      color: ColorSystem.green,
+                                      border: Border.all(color: Colors.black),
+                                      borderRadius: BorderRadius.circular(17)),
+                                  padding: EdgeInsets.all(8),
+                                  child:
+                                      SvgPicture.asset('assets/img/treadmill.svg'),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text('Day 21',
+                                          style: GoogleFonts.kanit(
+                                              fontSize: 18, color: Colors.grey)),
+                                      Text('100 Min Run',
+                                          style: GoogleFonts.kanit(fontSize: 24))
+                                    ],
+                                  ),
+                                ),
+                                Spacer(),
+                                Container(
+                                  height: 38,
+                                  width: 76,
+                                  decoration: BoxDecoration(
+                                      color: ColorSystem.grey,
+                                      border: Border.all(color: Colors.black),
+                                      borderRadius: BorderRadius.circular(17)),
+                                  child: Center(
+                                    child: Text('Start',
+                                        style: GoogleFonts.kanit(color: Colors.white)),
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                         ]),
                       ),
-
                       SizedBox(height: 16),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 16),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text('Water Tracker', style: GoogleFonts.kanit(fontSize: 24)),
+                            Text('Water Tracker',
+                                style: GoogleFonts.kanit(fontSize: 24)),
                             Text('2/5', style: GoogleFonts.kanit(fontSize: 24))
                           ],
                         ),
@@ -120,16 +245,29 @@ class _HealthHomePageState extends State<HealthHomePage> {
                         height: 100,
                         width: double.infinity,
                         child: ListView(
+                          padding: EdgeInsets.symmetric(horizontal: 16),
                           scrollDirection: Axis.horizontal,
                           children: [
+                            Container(
+                              height: 100,
+                              width: 100,
+                              decoration: BoxDecoration(
+                                color: ColorSystem.green,
+                                  borderRadius: BorderRadius.circular(26),
+                                  border: Border.all(color: Colors.black)),
+                              padding: EdgeInsets.all(16),
+                              child: SvgPicture.asset('assets/img/water_green.svg'),
+                            ),
                             Container(
                               margin: EdgeInsets.symmetric(horizontal: 16),
                               height: 100,
                               width: 100,
                               decoration: BoxDecoration(
+                                  color: ColorSystem.green,
                                   borderRadius: BorderRadius.circular(26),
-                                  border: Border.all(color: Colors.black)
-                              ),
+                                  border: Border.all(color: Colors.black)),
+                              padding: EdgeInsets.all(16),
+                              child: SvgPicture.asset('assets/img/water_green.svg'),
                             ),
                             Container(
                               margin: EdgeInsets.only(right: 16),
@@ -137,8 +275,9 @@ class _HealthHomePageState extends State<HealthHomePage> {
                               width: 100,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(26),
-                                  border: Border.all(color: Colors.black)
-                              ),
+                                  border: Border.all(color: Colors.black)),
+                              padding: EdgeInsets.all(16),
+                              child: SvgPicture.asset('assets/img/water_blue.svg'),
                             ),
                             Container(
                               margin: EdgeInsets.only(right: 16),
@@ -146,18 +285,19 @@ class _HealthHomePageState extends State<HealthHomePage> {
                               width: 100,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(26),
-                                  border: Border.all(color: Colors.black)
-                              ),
+                                  border: Border.all(color: Colors.black)),
+                              padding: EdgeInsets.all(16),
+                              child: SvgPicture.asset('assets/img/water_blue.svg'),
                             ),
                             Container(
-                              margin: EdgeInsets.only(right: 16),
                               height: 100,
                               width: 100,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(26),
-                                  border: Border.all(color: Colors.black)
-                              ),
-                            ),
+                                  border: Border.all(color: Colors.black)),
+                              padding: EdgeInsets.all(16),
+                              child: SvgPicture.asset('assets/img/water_blue.svg'),
+                            )
                           ],
                         ),
                       )
